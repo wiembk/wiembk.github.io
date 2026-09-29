@@ -24,7 +24,7 @@
     <p class="meta">Sousse, Tunisia · October 2024 - Present</p>
     <ul>
       <li>September 2026 - Present. Founded the TypeScript platform that replaces the legacy stack: NestJS API, Next.js storefront, and admin on Cloud Run, all provisioned with Terraform (GCS state, staging and production roots, Cloud SQL, budgets, audit logs, EU backups). Security from the first deploy: email OTP, TOTP, and passkey MFA with step-up auth, organizations with scoped RBAC, JWT rotation, login throttling, non-root images, and a PR-provenance deploy gate. Staging refreshes from an anonymized production backup.</li>
-      <li>2026. Ran production Magento on Compute Engine (Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB). Root-caused and fixed site-wide 503 storms from a flapping Varnish probe, a PHP-FPM OOM crash loop, disk fill from unrotated container logs, and MariaDB crashes (documented forensics, upgraded 10.4.30 to 10.4.34). Replaced a hard 429 bot block with a Cloudflare Turnstile human check, tuned FPM pool sizing, and stood up a Prometheus, Alertmanager, and Grafana observability stack with Blackbox and mysqld exporters and written alert rules. Brought a parallel Magento 2.4.8 / PHP 8.3 / OpenSearch staging stack and migrated the codebase to it.</li>
+      <li>2026. Ran production Magento on Compute Engine (Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB). Root-caused and fixed site-wide 503 storms from a flapping Varnish probe, a PHP-FPM OOM crash loop, disk fill from unrotated container logs, and MariaDB crashes (documented forensics, upgraded 10.4.30 to 10.4.34). Replaced a hard 429 bot block with a Cloudflare Turnstile human check, tuned FPM pool sizing, and stood up a Prometheus, Alertmanager, and Grafana monitoring and observability stack with Blackbox and mysqld exporters and written alert rules. Brought a parallel Magento 2.4.8 / PHP 8.3 / OpenSearch staging stack and migrated the codebase to it.</li>
       <li>2026. Added CI quality gates to the Magento repository in GitLab: PHPUnit integration and GraphQL API suites, security tests, and PHPStan with a managed baseline. Redesigned ClickToPay checkout as order-first with an atomic claim on pending payments, cart-drift protection, and status reconciliation, so no paid session is lost or double-placed.</li>
       <li>September 2025 - Present. Designed and built the Wamia store system: multi-user stores with RBAC, KYC document flows, and JWT auth, structured so a later upgrade is not a rewrite. Created the store dashboard. Modules cover catalog, orders, commissions, finance (balance, deposits, escrow, penalties, withdrawals, delay-penalty cron), promotions, discounts, reviews, refunds, CSV import/export, and analytics, exposed through an admin UI and GraphQL. Added a nightly Elasticsearch attribute reindex and a composite-score product ranking.</li>
       <li>2025 - 2026. Shipped the React Native shopper app with Expo and EAS Build: search, cart and stock, coupons, ClickToPay, wishlist, OTP channels, orders, and returns. iOS to TestFlight then the App Store; Android to Google Play as an App Bundle.</li>
@@ -41,7 +41,7 @@
       <li>February 2024. Seller product creation: stock from the quantity the seller sets, default catalog visibility, and required weight. Automatic import of enabled Magento products into Odoo, including fulfillment type and dimensions.</li>
     </ul>
 
-    <h2>Selected Outcomes</h2>
+    <h2>Key Achievements</h2>
     <ul>
       <li>1,929 commits across 5 repositories, November 2023 to September 2026, peaking at 244 commits in one month.</li>
       <li>Sole owner of three surfaces on one product: Magento backend and GraphQL, React dashboards, React Native app, and the release path for each.</li>
@@ -53,7 +53,7 @@
     <h3>Infrastructure as Code and Magento Deployment</h3>
     <p class="meta">ENET'Com · 2023 · https://github.com/wiembk/magento-IAC · https://github.com/wiembk/magento-ec2</p>
     <ul>
-      <li>Designed an AWS architecture in CloudFormation in eu-central-1 across two availability zones: VPC, public and private subnets, NAT, security groups, Application Load Balancer, Auto Scaling, Aurora MySQL, Elasticsearch, ElastiCache Redis, and S3.</li>
+      <li>Designed a high-availability AWS architecture in CloudFormation in eu-central-1 across two availability zones: VPC, public and private subnets, NAT, security groups, Application Load Balancer, Auto Scaling, Aurora MySQL, Elasticsearch, ElastiCache Redis, and S3.</li>
       <li>Automated Magento 2.4.3 installation with Bash on EC2. The script reads CloudFormation exports and connects the shop to Aurora, Elasticsearch, Redis, and the load balancer.</li>
       <li>Wrote a cost and performance reading of the design against projected traffic.</li>
     </ul>
@@ -69,10 +69,10 @@
     <h2>Skills</h2>
     <p>Programming: PHP, TypeScript, JavaScript, Python, Bash, SQL</p>
     <p>Frontend: React, Next.js, React Native, Expo, i18n (FR/EN/AR, RTL)</p>
-    <p>Backend: Magento 2, GraphQL, REST APIs, NestJS, Odoo, JWT, RBAC, MFA (OTP, TOTP, passkeys)</p>
-    <p>Quality: PHPUnit, PHPStan, GraphQL API tests, security tests, e2e screenshots, GitLab CI, GitHub Actions</p>
+    <p>Backend: Magento 2, PHP, GraphQL, REST APIs, Node.js, NestJS, Odoo, JWT, RBAC, MFA (OTP, TOTP, passkeys)</p>
+    <p>Quality and CI/CD: PHPUnit, PHPStan, GraphQL API tests, security tests, e2e screenshots, GitLab CI/CD, GitHub Actions</p>
     <p>DevOps: Linux (Debian, Ubuntu), Docker, Docker Compose, Nginx, Varnish, PHP-FPM tuning, Terraform, CloudFormation, Prometheus, Grafana, Alertmanager, SSL/TLS (Cloudflare, Let's Encrypt), DNS, SSH/SFTP, incident root cause</p>
-    <p>Cloud: Google Cloud (Compute Engine, Cloud Run, Cloud SQL, Cloud Storage, Artifact Registry, IAM), AWS (VPC, EC2, RDS Aurora, S3, ALB, ElastiCache), Cloudflare (Turnstile, CSP)</p>
+    <p>Cloud: Google Cloud Platform (GCP: Compute Engine, Cloud Run, Cloud SQL, Cloud Storage, Artifact Registry, IAM), AWS (VPC, EC2, RDS Aurora, S3, ALB, ElastiCache), Cloudflare (Turnstile, CSP)</p>
     <p>Data: MySQL, MariaDB, PostgreSQL, Redis, Elasticsearch, OpenSearch, RabbitMQ</p>
     <p>Payments and integrations: ClickToPay, Meta Catalog, WhatsApp notifications, WinSMS, App Store Connect, Google Play</p>
 
