@@ -214,7 +214,7 @@
         </header>
         <div>
           <p>Magento runs as Docker Compose on Google Compute Engine: Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB. GitLab CI releases to staging and production over SSH, and now gates merges with PHPUnit integration and GraphQL API suites, security tests, and PHPStan.</p>
-          <p>Incidents closed with a written root cause: site-wide 503 storms from a flapping Varnish probe, a PHP-FPM OOM crash loop, disk fill from unrotated container logs, and MariaDB crashes (forensics documented, 10.4.30 to 10.4.34). Replaced a hard 429 bot block with a Cloudflare Turnstile human check, added a staging observability stack, and brought a parallel Magento 2.4.8 / PHP 8.3 / OpenSearch stack to migrate onto.</p>
+          <p>Incidents closed with a written root cause: site-wide 503 storms from a flapping Varnish probe, a PHP-FPM OOM crash loop, disk fill from unrotated container logs, and MariaDB crashes (forensics documented, 10.4.30 to 10.4.34). Replaced a hard 429 bot block with a Cloudflare Turnstile human check, added a Prometheus, Alertmanager, and Grafana observability stack with alert rules, and brought a parallel Magento 2.4.8 / PHP 8.3 / OpenSearch stack to migrate onto.</p>
           <ul class="stack">
             <li>Compute Engine</li>
             <li>Nginx</li>
@@ -222,6 +222,8 @@
             <li>PHP-FPM</li>
             <li>MariaDB</li>
             <li>Cloudflare</li>
+            <li>Prometheus</li>
+            <li>Grafana</li>
             <li>PHPUnit</li>
             <li>PHPStan</li>
           </ul>
@@ -396,7 +398,7 @@
           </tr>
           <tr>
             <th>Release</th>
-            <td>Docker, GitLab CI, GitHub Actions, Nginx, Varnish, Cloudflare, TestFlight, App Store, Google Play</td>
+            <td>Docker, GitLab CI, GitHub Actions, Nginx, Varnish, Prometheus, Grafana, Alertmanager, Cloudflare, TestFlight, App Store, Google Play</td>
           </tr>
           <tr>
             <th>Cloud</th>
