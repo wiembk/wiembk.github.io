@@ -13,54 +13,75 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%231c1915' width='32' height='32'/%3E%3Ctext x='4' y='22' fill='%23f3efe6' font-family='Georgia' font-size='16'%3EWB%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%231c3d34' width='32' height='32'/%3E%3Ctext x='4' y='22' fill='%23f4efe4' font-family='Georgia' font-size='16'%3EWB%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-  <header class="stage">
-    <div class="wash" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="topbar">
-        <span>WB · Sousse · 2023—2026</span>
-        <nav>
-          <a href="#work">Work</a>
-          <a href="#practice">Practice</a>
-          <a href="#skills">Skills</a>
-          <a href="resume.html">Resume</a>
-        </nav>
-      </div>
+  <svg class="terrain" aria-hidden="true">
+    <defs>
+      <pattern id="contours" width="320" height="200" patternUnits="userSpaceOnUse">
+        <path d="M-20 110 C 40 50, 110 160, 180 90 S 280 40, 340 100" fill="none" stroke="currentColor" stroke-width="0.7"/>
+        <path d="M-20 140 C 50 80, 120 190, 190 120 S 290 70, 340 130" fill="none" stroke="currentColor" stroke-width="0.45"/>
+        <path d="M-10 60 C 60 20, 130 100, 210 40" fill="none" stroke="currentColor" stroke-width="0.4"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#contours)"/>
+    <path class="hill" d="M0 180 C 80 120, 140 200, 220 150 C 280 110, 320 160, 360 140 L 360 220 L 0 220 Z"/>
+    <path class="hill hill-far" d="M640 90 C 720 40, 800 120, 900 70 C 980 30, 1080 90, 1160 50 L 1160 0 L 640 0 Z"/>
+  </svg>
 
-      <section class="hero">
-        <p class="eyebrow">Full-Stack Engineer · DevOps</p>
-        <h1>Wièm Boubakri</h1>
-        <p class="lede">I built the new Wamia store system: multi-user stores with RBAC, KYC, and JWT, shaped so it can be upgraded later. I created the seller dashboard and the store dashboard. The product ships on Magento and React, through Compute Engine, Cloud Run, and Expo.</p>
-        <ul class="contact">
-          <li><a href="mailto:boubakri.ict@gmail.com">boubakri.ict@gmail.com</a></li>
-          <li><a href="tel:+21652370702">+216 52 370 702</a></li>
-          <li><a href="https://github.com/wiembk">github.com/wiembk</a></li>
-          <li>Sousse, Tunisia</li>
-        </ul>
-      </section>
-    </div>
+  <header class="atlas-bar">
+    <span class="sheet-id">WB · 35.82° N · 10.64° E</span>
+    <nav>
+      <a href="#map">Map</a>
+      <a href="#work">Work</a>
+      <a href="#practice">Practice</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="resume.html">CV</a>
+    </nav>
   </header>
 
-  <div class="wrap">
-    <ol class="path" aria-label="Where the marketplace runs">
-      <li class="tone-terra">
+  <div class="sheet">
+    <div class="spine" aria-hidden="true"></div>
+
+    <header class="here" id="map">
+      <p class="continues"><span>To be continued</span> ↑</p>
+      <p class="here-pin"><span class="pulse"></span> You are here</p>
+      <p class="eyebrow">Full-Stack Engineer · DevOps</p>
+      <h1>Wièm Boubakri</h1>
+      <p class="lede">I built the new Wamia store system: multi-user stores with RBAC, KYC, and JWT, shaped so it can be upgraded later. I created the seller dashboard and the store dashboard. The product ships on Magento and React, through Compute Engine, Cloud Run, and Expo.</p>
+      <ul class="contact">
+        <li><a href="mailto:boubakri.ict@gmail.com">boubakri.ict@gmail.com</a></li>
+        <li><a href="tel:+21652370702">+216 52 370 702</a></li>
+        <li><a href="https://github.com/wiembk">github.com/wiembk</a></li>
+        <li>Sousse, Tunisia</li>
+      </ul>
+      <svg class="compass" viewBox="0 0 80 80" aria-hidden="true">
+        <circle cx="40" cy="40" r="30" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <circle cx="40" cy="40" r="18" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        <path d="M40 12 L44 40 L40 36 L36 40 Z" fill="currentColor"/>
+        <path d="M40 68 L36 40 L40 44 L44 40 Z" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <text x="36" y="10" font-size="7">N</text>
+      </svg>
+    </header>
+
+    <ol class="path" aria-label="Where the product runs">
+      <li>
         <span class="idx">01 · Catalog</span>
         <strong>Magento 2</strong>
         <span class="where">Compute Engine · GitLab CI · Docker Compose</span>
       </li>
-      <li class="tone-teal">
+      <li>
         <span class="idx">02 · Seller desk</span>
         <strong>React</strong>
         <span class="where">Docker image · Cloud Run · GraphQL</span>
       </li>
-      <li class="tone-indigo">
+      <li>
         <span class="idx">03 · Shoppers</span>
         <strong>iOS &amp; Android</strong>
         <span class="where">Expo · TestFlight · App Store · Play</span>
       </li>
-      <li class="tone-gold">
+      <li>
         <span class="idx">04 · Edge &amp; cloud</span>
         <strong>GCP, AWS, Cloudflare</strong>
         <span class="where">Terraform now · CloudFormation first</span>
@@ -71,7 +92,8 @@
       <h2>Selected work</h2>
       <p class="section-lead">Newest first. Production and the new store system, then the seller dashboard, then OBG, then the degree project.</p>
 
-      <article class="case tone-gold">
+      <div class="miles">
+      <article class="case">
         <header>
           <p>Wamia · 2026</p>
           <h3>Production</h3>
@@ -89,7 +111,7 @@
         </div>
       </article>
 
-      <article class="case tone-terra">
+      <article class="case">
         <header>
           <p>Wamia · Sep 2025 — present</p>
           <h3>Store modules</h3>
@@ -108,7 +130,7 @@
         </div>
       </article>
 
-      <article class="case tone-indigo">
+      <article class="case">
         <header>
           <p>Wamia · 2025 — 2026</p>
           <h3>Shopper app</h3>
@@ -126,7 +148,7 @@
         </div>
       </article>
 
-      <article class="case tone-gold">
+      <article class="case">
         <header>
           <p>Wamia · May 2025 — Aug 2025</p>
           <h3>Seller pause and catalog sync</h3>
@@ -143,7 +165,7 @@
         </div>
       </article>
 
-      <article class="case tone-teal">
+      <article class="case">
         <header>
           <p>Wamia · Oct 2024 — May 2025</p>
           <h3>Seller dashboard</h3>
@@ -162,7 +184,7 @@
         </div>
       </article>
 
-      <article class="case tone-plum">
+      <article class="case">
         <header>
           <p>OBG · Jan 2023 — Oct 2024</p>
           <h3>Magento seller tools</h3>
@@ -181,7 +203,7 @@
         </div>
       </article>
 
-      <article class="case tone-indigo">
+      <article class="case">
         <header>
           <p>ENET’Com · 2023</p>
           <h3>End of studies</h3>
@@ -201,21 +223,22 @@
           </ul>
         </div>
       </article>
+      </div>
     </section>
 
     <section id="practice">
       <h2>How the work actually goes</h2>
       <p class="section-lead">Web, mobile, and infrastructure are one job when the shop is live. The useful version of “works under pressure” is a short list of production days, not a personality line.</p>
       <div class="notes">
-        <article class="tone-terra">
+        <article>
           <h3>Production days</h3>
           <p>Site-wide 503s from a flapping Varnish probe. PHP-FPM killed by the out-of-memory killer. A disk filling with container logs. A MariaDB upgrade on the production database VM. Each one was narrowed, changed, and left in a state the next deploy could survive.</p>
         </article>
-        <article class="tone-teal">
+        <article>
           <h3>One owner, three surfaces</h3>
           <p>A seller feature usually means a Magento module, a React screen, and a release. The mobile app consumes the same API. I stay through TestFlight with the team instead of handing the binary off at the edge of the ticket.</p>
         </article>
-        <article class="tone-gold">
+        <article>
           <h3>From scripts to Terraform</h3>
           <p>The degree was CloudFormation and Bash. At OBG the commits are Magento seller tools on the marketplace. Wamia production is Compose on Compute Engine, the seller desk is Cloud Run, Cloudflare is on the edge, and the new platform is Terraform. The tool changed. The habit is the same: the environment is part of the feature.</p>
         </article>
@@ -279,10 +302,11 @@
       </div>
     </section>
 
-    <footer>
+    <footer id="contact">
       <span>Wièm Boubakri</span>
       <a href="resume.pdf" download>Download resume (PDF)</a>
     </footer>
   </div>
+  <script src="map.js"></script>
 </body>
 </html>
