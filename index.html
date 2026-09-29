@@ -69,36 +69,16 @@
 
     <section id="work">
       <h2>Selected work</h2>
-      <p class="section-lead">Employment is two chapters on one product. OBG from 2023, then Wamia from October 2024. The degree project underneath is the AWS Magento platform I designed before either job.</p>
-
-      <article class="case tone-terra">
-        <header>
-          <p>Wamia · Oct 2024 — present</p>
-          <h3>Store modules</h3>
-        </header>
-        <div>
-          <p>I lead the modules that replace the legacy marketplace. The Store domain covers seller stores, catalog, orders, commissions, finance (balance, escrow, deposits, withdrawals), promotions, discounts, reviews, and refunds, with an admin and a GraphQL API.</p>
-          <p>Around that core: ClickToPay checkout, Meta catalog sync, WhatsApp order notifications, store analytics, and the move onto Magento 2.4.8 and PHP 8.3. In September 2026 I started the TypeScript rewrite — NestJS, Next.js, organizations and roles, MFA — on Terraform and Cloud Run.</p>
-          <ul class="stack">
-            <li>Magento 2</li>
-            <li>PHP</li>
-            <li>GraphQL</li>
-            <li>ClickToPay</li>
-            <li>NestJS</li>
-            <li>Terraform</li>
-            <li>Cloud Run</li>
-          </ul>
-        </div>
-      </article>
+      <p class="section-lead">Wamia, in order. Seller dashboard first, then the store rewrite that replaced the legacy marketplace.</p>
 
       <article class="case tone-teal">
         <header>
-          <p>Wamia · 2025 — present</p>
+          <p>Wamia · Oct 2024 — May 2025</p>
           <h3>Seller dashboard</h3>
         </header>
         <div>
           <p>A React and TypeScript back office for sellers: products, inventory, orders, invoices, finance, promotions, shipping, reviews, and analytics, in French, English, and Arabic. It talks to Magento over GraphQL.</p>
-          <p>GitLab CI builds a Docker image, pushes it to Artifact Registry, and deploys Cloud Run for dev and production. Magento itself stays on a Compute Engine VM. That split is the architecture: a fast frontend, a commerce API that does not move with every UI release.</p>
+          <p>GitLab CI builds a Docker image, pushes it to Artifact Registry, and deploys Cloud Run for dev and production. Magento GraphQL stays on a Compute Engine VM.</p>
           <ul class="stack">
             <li>React</li>
             <li>TypeScript</li>
@@ -110,13 +90,30 @@
         </div>
       </article>
 
+      <article class="case tone-gold">
+        <header>
+          <p>Wamia · May 2025 — Aug 2025</p>
+          <h3>Seller pause and catalog sync</h3>
+        </header>
+        <div>
+          <p>Seller Pause in Magento and React, and Meta Catalog Sync from Magento out to Meta. The catalog sync keeps external marketing channels on the same products as the shop.</p>
+          <p>This phase also covered the technical design for leaving the legacy marketplace: documentation, the target architecture, and the migration path.</p>
+          <ul class="stack">
+            <li>Magento 2</li>
+            <li>React</li>
+            <li>Meta</li>
+            <li>GraphQL</li>
+          </ul>
+        </div>
+      </article>
+
       <article class="case tone-indigo">
         <header>
           <p>Wamia · 2025 — 2026</p>
           <h3>Shopper app</h3>
         </header>
         <div>
-          <p>React Native shopper flows on top of the same GraphQL API: search and filters, cart and stock, coupons, ClickToPay, wishlist, orders, and returns.</p>
+          <p>React Native shopper flows on the same GraphQL API: search and filters, cart and stock, coupons, ClickToPay, wishlist, orders, and returns.</p>
           <p>Releases go through Expo and EAS Build. Android ships to Google Play as an App Bundle. iOS goes to TestFlight so the team can install the build, then to the App Store.</p>
           <ul class="stack">
             <li>React Native</li>
@@ -128,14 +125,32 @@
         </div>
       </article>
 
+      <article class="case tone-terra">
+        <header>
+          <p>Wamia · Sep 2025 — present</p>
+          <h3>Store modules</h3>
+        </header>
+        <div>
+          <p>This is the phase where I refactored the Wamia Magento platform across the storefront, the backend, and the infrastructure, and improved database performance and category pages. The new Store modules replace the legacy marketplace: seller stores, catalog, orders, commissions, finance, promotions, discounts, reviews, and refunds, with an admin and GraphQL.</p>
+          <p>With that: ClickToPay, WhatsApp order notifications, store analytics, and the move onto Magento 2.4.8 and PHP 8.3. In September 2026 I started the TypeScript rewrite — NestJS, Next.js, organizations and roles, MFA — on Terraform and Cloud Run.</p>
+          <ul class="stack">
+            <li>Magento 2</li>
+            <li>PHP</li>
+            <li>GraphQL</li>
+            <li>ClickToPay</li>
+            <li>NestJS</li>
+            <li>Terraform</li>
+          </ul>
+        </div>
+      </article>
+
       <article class="case tone-gold">
         <header>
-          <p>Wamia · production</p>
-          <h3>The machine under the shop</h3>
+          <p>Wamia · 2026</p>
+          <h3>Production</h3>
         </header>
         <div>
           <p>Magento runs as Docker Compose on Google Compute Engine: Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB. GitLab CI releases to staging and production over SSH. Cloudflare Turnstile sits in front of abusive catalog traffic.</p>
-          <p>The habit underneath started earlier. At ENET’Com I described the same kind of system in AWS CloudFormation, then installed Magento with Bash. At OBG I operated Docker, Nginx, GitLab, Elasticsearch, and both GCP and AWS while the Magento and Odoo integration was being built.</p>
           <ul class="stack">
             <li>Compute Engine</li>
             <li>Nginx</li>
@@ -150,13 +165,12 @@
       <article class="case tone-plum">
         <header>
           <p>OBG · Jan 2023 — Oct 2024</p>
-          <h3>Platform, ERP, operations</h3>
+          <h3>ERP and operations</h3>
         </header>
         <div>
-          <p>Software engineer and DevOps on the Wamia platform. I refactored Magento across the store, improved database performance, and built APIs that sync inventory, orders, and sales with Odoo. I wrote the commission calculation used on seller products and tightened category performance.</p>
-          <p>On the operations side I deployed Odoo with Docker Compose and Nginx, TLS with Certbot, and DNS. A Flask API managed Dockerized Odoo instances, with backups across regions. GitLab workflows and staging environments sat in front of GCP and AWS.</p>
+          <p>Software engineer and DevOps on the Wamia platform. I built the APIs that sync inventory, orders, and sales with Odoo, and the commission calculation used on seller products.</p>
+          <p>I deployed Odoo with Docker Compose and Nginx, TLS with Certbot, and DNS. A Flask API managed Dockerized Odoo instances, with backups across regions. GitLab workflows and staging environments sat in front of GCP and AWS, with Elasticsearch and MariaDB.</p>
           <ul class="stack">
-            <li>Magento</li>
             <li>Odoo</li>
             <li>Python</li>
             <li>Flask</li>
@@ -267,7 +281,7 @@
 
     <footer>
       <span>Wièm Boubakri</span>
-      <a href="resume.html">Printable resume</a>
+      <a href="resume.pdf" download>Download resume (PDF)</a>
     </footer>
   </div>
 </body>

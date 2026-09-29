@@ -3,98 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wièm Boubakri — Resume</title>
-  <meta name="description" content="Resume of Wièm Boubakri, Full-Stack and DevOps engineer. Wamia and OBG, Magento, React, mobile, GCP and AWS.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Wiem Boubakri - Resume</title>
+  <meta name="description" content="Resume of Wiem Boubakri, Full-Stack and DevOps engineer.">
   <link rel="stylesheet" href="resume.css">
 </head>
-<body class="resume">
-  <div class="wrap sheet">
-    <p class="back"><a href="index.html">Portfolio</a> · <button type="button" onclick="window.print()">Print or save PDF</button></p>
+<body>
+  <p class="nav"><a href="index.html">Portfolio</a> · <a href="resume.pdf" download>Download PDF</a></p>
 
-    <header class="resume-head">
-      <div>
-        <p class="eyebrow">Full-Stack &amp; DevOps Engineer</p>
-        <h1>Wièm Boubakri</h1>
-      </div>
-      <ul class="contact">
-        <li>Sousse, Tunisia</li>
-        <li><a href="mailto:boubakri.ict@gmail.com">boubakri.ict@gmail.com</a></li>
-        <li><a href="tel:+21652370702">+216 52 370 702</a></li>
-        <li><a href="https://github.com/wiembk">github.com/wiembk</a></li>
-        <li><a href="https://wiembk.github.io/">wiembk.github.io</a></li>
-      </ul>
-    </header>
+  <main>
+    <h1>Wiem Boubakri</h1>
+    <p class="role">Full-Stack and DevOps Engineer</p>
+    <p class="contact">Sousse, Tunisia · boubakri.ict@gmail.com · +216 52 370 702 · https://github.com/wiembk · https://wiembk.github.io</p>
 
-    <p class="summary">Full-stack and DevOps engineer on Wamia, a multi-vendor marketplace (French, Arabic, English). I own features from the Magento module and the React seller desk through to the React Native app, and I deploy them: Magento on Google Compute Engine, the dashboard with Docker on Cloud Run, mobile with Expo to TestFlight, the App Store, and Google Play. I started with AWS CloudFormation and Bash, and I now use Docker, Terraform, Cloudflare, GCP, and GitLab CI on a system that is already in production.</p>
+    <h2>Summary</h2>
+    <p>Full-stack and DevOps engineer on Wamia, a multi-vendor marketplace in French, Arabic, and English. Builds Magento 2 modules, a React seller dashboard, and a React Native shopper app, and deploys them: Magento on Google Compute Engine, the dashboard with Docker on Cloud Run, and mobile with Expo to TestFlight, the App Store, and Google Play. Started with AWS CloudFormation and Bash. Now uses Docker, Terraform, Cloudflare, Google Cloud, and GitLab CI on a production system.</p>
 
     <h2>Experience</h2>
 
-    <article class="job">
-      <header>
-        <h3>Wamia — Full-Stack &amp; DevOps Engineer</h3>
-        <p>Sousse, Tunisia · Oct 2024 – Present</p>
-      </header>
-      <ul>
-        <li>Lead the Store modules replacing the legacy marketplace: seller stores, catalog, orders, commissions, finance (balance, escrow, deposits, withdrawals), promotions, discounts, reviews, and refunds, with admin UI and GraphQL.</li>
-        <li>Built the React seller dashboard (French, English, Arabic) for products, inventory, orders, invoices, finance, and analytics. GitLab CI ships a Docker image to Cloud Run. Magento GraphQL stays on a Compute Engine VM.</li>
-        <li>Shipped the React Native shopper app with Expo and EAS Build: TestFlight for the team, then the App Store, and an Android App Bundle to Google Play.</li>
-        <li>Operate production Magento (Nginx, Varnish, PHP-FPM, MariaDB) on Compute Engine, including incident response for 503 storms, PHP-FPM memory crashes, and disk fill, plus Cloudflare Turnstile and the Magento 2.4.8 / PHP 8.3 upgrade.</li>
-        <li>Started the TypeScript platform in 2026: NestJS, Next.js, scoped roles, MFA, and Terraform on Cloud Run.</li>
-      </ul>
-    </article>
+    <h3>Full-Stack and DevOps Engineer, Wamia</h3>
+    <p class="meta">Sousse, Tunisia · October 2024 - Present</p>
+    <ul>
+      <li>October 2024 - May 2025. Built the React and TypeScript seller dashboard in French, English, and Arabic for products, inventory, orders, invoices, finance, and analytics. GitLab CI builds a Docker image and deploys it to Cloud Run. Magento GraphQL stays on a Compute Engine virtual machine.</li>
+      <li>May 2025 - August 2025. Shipped Seller Pause in Magento and React, and Meta Catalog Sync from Magento to Meta. Wrote the migration plan off the legacy marketplace.</li>
+      <li>2025 - 2026. Shipped the React Native shopper app with Expo and EAS Build. iOS goes to TestFlight for the team, then the App Store. Android ships to Google Play as an App Bundle.</li>
+      <li>September 2025 - Present. Refactored Magento across the storefront, backend, and infrastructure. Improved database performance and category pages. Led the Store modules that replace the legacy marketplace: catalog, orders, commissions, finance, promotions, discounts, reviews, and refunds, with an admin UI and GraphQL.</li>
+      <li>2026. Operate production Magento on Compute Engine with Nginx, Varnish, PHP-FPM, and MariaDB. Handled site-wide 503 responses, PHP-FPM out-of-memory crashes, and disk fill from container logs. Added Cloudflare Turnstile. Upgraded to Magento 2.4.8 and PHP 8.3. Started the TypeScript platform: NestJS, Next.js, scoped roles, MFA, and Terraform on Cloud Run.</li>
+    </ul>
 
-    <article class="job">
-      <header>
-        <h3>OBG — Software Engineer / DevOps Engineer</h3>
-        <p>Jan 2023 – Oct 2024</p>
-      </header>
-      <ul>
-        <li>Refactored the Wamia Magento platform across storefront, backend, and infrastructure, and improved database performance and category pages.</li>
-        <li>Built APIs integrating Magento with Odoo for inventory, orders, and sales, and a commission calculation module for seller products.</li>
-        <li>Deployed Odoo with Docker Compose and Nginx, DNS, and TLS (Certbot). Built a Flask API to manage Dockerized Odoo instances, with multi-region backups.</li>
-        <li>Ran GitLab workflows, staging environments, Elasticsearch, and MariaDB across GCP and AWS.</li>
-      </ul>
-    </article>
+    <h3>Software Engineer and DevOps Engineer, OBG</h3>
+    <p class="meta">January 2023 - October 2024</p>
+    <ul>
+      <li>Built APIs integrating Magento with Odoo for inventory, orders, and sales, and a commission calculation module for seller products.</li>
+      <li>Deployed Odoo with Docker Compose and Nginx, DNS, and TLS using Certbot. Built a Flask API to manage Dockerized Odoo instances, with multi-region backups.</li>
+      <li>Ran GitLab workflows, staging environments, Elasticsearch, and MariaDB across Google Cloud and AWS.</li>
+    </ul>
 
-    <h2>End of studies project</h2>
-    <article class="job">
-      <header>
-        <h3>Infrastructure as code and Magento deployment</h3>
-        <p>ENET’Com · 2023 · <a href="https://github.com/wiembk/magento-IAC">magento-IAC</a> · <a href="https://github.com/wiembk/magento-ec2">magento-ec2</a></p>
-      </header>
-      <ul>
-        <li>Designed an AWS architecture in CloudFormation, eu-central-1, two availability zones: VPC, public and private subnets, NAT, security groups, Application Load Balancer, Auto Scaling, Aurora MySQL, Elasticsearch, ElastiCache Redis, and S3.</li>
-        <li>Automated Magento 2.4.3 installation with Bash on EC2. The script reads CloudFormation exports and connects the shop to Aurora, Elasticsearch, Redis, and the load balancer.</li>
-        <li>Wrote a cost and performance reading of the design against projected traffic.</li>
-      </ul>
-    </article>
+    <h2>Projects</h2>
+
+    <h3>Infrastructure as Code and Magento Deployment</h3>
+    <p class="meta">ENET'Com · 2023 · https://github.com/wiembk/magento-IAC · https://github.com/wiembk/magento-ec2</p>
+    <ul>
+      <li>Designed an AWS architecture in CloudFormation in eu-central-1 across two availability zones: VPC, public and private subnets, NAT, security groups, Application Load Balancer, Auto Scaling, Aurora MySQL, Elasticsearch, ElastiCache Redis, and S3.</li>
+      <li>Automated Magento 2.4.3 installation with Bash on EC2. The script reads CloudFormation exports and connects the shop to Aurora, Elasticsearch, Redis, and the load balancer.</li>
+      <li>Wrote a cost and performance reading of the design against projected traffic.</li>
+    </ul>
 
     <h2>Education</h2>
-    <article class="job">
-      <header>
-        <h3>Engineering degree, Network &amp; Cloud Infrastructure</h3>
-        <p>ENET’Com, Sfax · 2020 – 2023</p>
-      </header>
-    </article>
-    <article class="job">
-      <header>
-        <h3>Preparatory class, Mathematics and Physics</h3>
-        <p>ESSTHS, Sousse · 2018 – 2020</p>
-      </header>
-    </article>
+
+    <h3>Engineering Degree, Network and Cloud Infrastructure</h3>
+    <p class="meta">ENET'Com, Sfax · 2020 - 2023</p>
+
+    <h3>Preparatory Class, Mathematics and Physics</h3>
+    <p class="meta">ESSTHS, Sousse · 2018 - 2020</p>
 
     <h2>Skills</h2>
-    <p class="tight">PHP, JavaScript, TypeScript, Python, Bash · React, Next.js, React Native, Expo · Magento 2, GraphQL, REST, NestJS, Odoo · Docker, Nginx, Varnish, GitLab CI, GitHub Actions, Terraform, CloudFormation · GCP (Compute Engine, Cloud Run, Cloud SQL, GCS), AWS (VPC, EC2, RDS, S3, ALB, ElastiCache), Cloudflare · MySQL, MariaDB, PostgreSQL, Redis, Elasticsearch · Linux, SSL/TLS, DNS, SSH</p>
+    <p>Programming: PHP, JavaScript, TypeScript, Python, Bash</p>
+    <p>Frontend: React, Next.js, React Native, Expo</p>
+    <p>Backend: Magento 2, GraphQL, REST APIs, NestJS, Odoo</p>
+    <p>DevOps: Docker, Nginx, Varnish, GitLab CI/CD, GitHub Actions, Terraform, CloudFormation, Linux, SSL/TLS, DNS, SSH</p>
+    <p>Cloud: Google Cloud (Compute Engine, Cloud Run, Cloud SQL, Cloud Storage), AWS (VPC, EC2, RDS, S3, Application Load Balancer, ElastiCache), Cloudflare</p>
+    <p>Databases: MySQL, MariaDB, PostgreSQL, Redis, Elasticsearch</p>
 
-    <h2>Certificates</h2>
-    <p class="tight">AWS Certified Cloud Practitioner · DevOps on AWS Specialization · Cloud Operations on AWS · Azure Fundamentals · Introduction to Programming Using Python · Introduction to Git and GitHub · Introduction to Network Automation · Crash Course on Python · IBM Full Stack Software Developer (in progress)</p>
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Certified Cloud Practitioner</li>
+      <li>DevOps on AWS Specialization</li>
+      <li>Cloud Operations on AWS</li>
+      <li>Azure Fundamentals</li>
+      <li>Introduction to Programming Using Python</li>
+      <li>Introduction to Git and GitHub</li>
+      <li>Introduction to Network Automation</li>
+      <li>Crash Course on Python</li>
+      <li>IBM Full Stack Software Developer Professional Certificate (in progress)</li>
+    </ul>
 
     <h2>Languages</h2>
-    <p class="tight">English C1 · French B1</p>
-  </div>
+    <p>English, C1. French, B1.</p>
+  </main>
 </body>
 </html>
