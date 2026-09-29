@@ -16,46 +16,51 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%231c1915' width='32' height='32'/%3E%3Ctext x='4' y='22' fill='%23f3efe6' font-family='Georgia' font-size='16'%3EWB%3C/text%3E%3C/svg%3E">
 </head>
 <body>
+  <header class="stage">
+    <div class="wash" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="topbar">
+        <span>WB · Sousse · 2023—2026</span>
+        <nav>
+          <a href="#work">Work</a>
+          <a href="#practice">Practice</a>
+          <a href="#skills">Skills</a>
+          <a href="resume.html">Resume</a>
+        </nav>
+      </div>
+
+      <section class="hero">
+        <p class="eyebrow">Full-Stack Engineer · DevOps</p>
+        <h1>Wièm Boubakri</h1>
+        <p class="lede">I build Wamia, a multi-vendor marketplace in Tunisia, and I run the path it ships on. Magento and React for the product. Compute Engine, Cloud Run, and Expo for the release. The same person stays with it when production is under pressure.</p>
+        <ul class="contact">
+          <li><a href="mailto:boubakri.ict@gmail.com">boubakri.ict@gmail.com</a></li>
+          <li><a href="tel:+21652370702">+216 52 370 702</a></li>
+          <li><a href="https://github.com/wiembk">github.com/wiembk</a></li>
+          <li>Sousse, Tunisia</li>
+        </ul>
+      </section>
+    </div>
+  </header>
+
   <div class="wrap">
-    <header class="topbar">
-      <span>WB · Sousse · 2023—2026</span>
-      <nav>
-        <a href="#work">Work</a>
-        <a href="#practice">Practice</a>
-        <a href="#skills">Skills</a>
-        <a href="resume.html">Resume</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <p class="eyebrow">Full-Stack Engineer · DevOps</p>
-      <h1>Wièm Boubakri</h1>
-      <p class="lede">I build Wamia, a multi-vendor marketplace in Tunisia, and I run the path it ships on. Magento and React for the product. Compute Engine, Cloud Run, and Expo for the release. The same person stays with it when production is under pressure.</p>
-      <ul class="contact">
-        <li><a href="mailto:boubakri.ict@gmail.com">boubakri.ict@gmail.com</a></li>
-        <li><a href="tel:+21652370702">+216 52 370 702</a></li>
-        <li><a href="https://github.com/wiembk">github.com/wiembk</a></li>
-        <li>Sousse, Tunisia</li>
-      </ul>
-    </section>
-
     <ol class="path" aria-label="Where the marketplace runs">
-      <li>
+      <li class="tone-terra">
         <span class="idx">01 · Catalog</span>
         <strong>Magento 2</strong>
         <span class="where">Compute Engine · GitLab CI · Docker Compose</span>
       </li>
-      <li>
+      <li class="tone-teal">
         <span class="idx">02 · Seller desk</span>
         <strong>React</strong>
         <span class="where">Docker image · Cloud Run · GraphQL</span>
       </li>
-      <li>
+      <li class="tone-indigo">
         <span class="idx">03 · Shoppers</span>
         <strong>iOS &amp; Android</strong>
         <span class="where">Expo · TestFlight · App Store · Play</span>
       </li>
-      <li>
+      <li class="tone-gold">
         <span class="idx">04 · Edge &amp; cloud</span>
         <strong>GCP, AWS, Cloudflare</strong>
         <span class="where">Terraform now · CloudFormation first</span>
@@ -66,7 +71,7 @@
       <h2>Selected work</h2>
       <p class="section-lead">Employment is two chapters on one product. OBG from 2023, then Wamia from October 2024. The degree project underneath is the AWS Magento platform I designed before either job.</p>
 
-      <article class="case">
+      <article class="case tone-terra">
         <header>
           <p>Wamia · Oct 2024 — present</p>
           <h3>Store modules</h3>
@@ -86,7 +91,7 @@
         </div>
       </article>
 
-      <article class="case">
+      <article class="case tone-teal">
         <header>
           <p>Wamia · 2025 — present</p>
           <h3>Seller dashboard</h3>
@@ -105,7 +110,7 @@
         </div>
       </article>
 
-      <article class="case">
+      <article class="case tone-indigo">
         <header>
           <p>Wamia · 2025 — 2026</p>
           <h3>Shopper app</h3>
@@ -123,7 +128,7 @@
         </div>
       </article>
 
-      <article class="case">
+      <article class="case tone-gold">
         <header>
           <p>Wamia · production</p>
           <h3>The machine under the shop</h3>
@@ -142,7 +147,7 @@
         </div>
       </article>
 
-      <article class="case">
+      <article class="case tone-plum">
         <header>
           <p>OBG · Jan 2023 — Oct 2024</p>
           <h3>Platform, ERP, operations</h3>
@@ -162,7 +167,7 @@
         </div>
       </article>
 
-      <article class="case">
+      <article class="case tone-indigo">
         <header>
           <p>ENET’Com · 2023</p>
           <h3>End of studies</h3>
@@ -188,15 +193,15 @@
       <h2>How the work actually goes</h2>
       <p class="section-lead">Web, mobile, and infrastructure are one job when the shop is live. The useful version of “works under pressure” is a short list of production days, not a personality line.</p>
       <div class="notes">
-        <article>
+        <article class="tone-terra">
           <h3>Production days</h3>
           <p>Site-wide 503s from a flapping Varnish probe. PHP-FPM killed by the out-of-memory killer. A disk filling with container logs. A MariaDB upgrade on the production database VM. Each one was narrowed, changed, and left in a state the next deploy could survive.</p>
         </article>
-        <article>
+        <article class="tone-teal">
           <h3>One owner, three surfaces</h3>
           <p>A seller feature usually means a Magento module, a React screen, and a release. The mobile app consumes the same API. I stay through TestFlight with the team instead of handing the binary off at the edge of the ticket.</p>
         </article>
-        <article>
+        <article class="tone-gold">
           <h3>From scripts to Terraform</h3>
           <p>The degree was CloudFormation and Bash. OBG was Docker, GitLab, and two clouds. Wamia production is Compose on Compute Engine, the seller desk is Cloud Run, Cloudflare is on the edge, and the new platform is Terraform. The tool changed. The habit is the same: the environment is part of the feature.</p>
         </article>

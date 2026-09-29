@@ -1,5 +1,12 @@
 .resume { font-size: 15px; }
 
+.resume::before {
+  content: "";
+  display: block;
+  height: 8px;
+  background: linear-gradient(90deg, #e4572e, #e0a106, #0c8f7b, #3a4fd0);
+}
+
 .sheet { padding-bottom: 48px; }
 
 .back {
