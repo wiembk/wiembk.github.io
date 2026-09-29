@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wièm Boubakri — Full-Stack &amp; DevOps</title>
+  <meta name="description" content="Wièm Boubakri, full-stack and DevOps engineer in Sousse. Magento, React, React Native, and the GCP and AWS infrastructure they run on. Wamia marketplace, 2023–present.">
+  <meta property="og:title" content="Wièm Boubakri — Full-Stack & DevOps">
+  <meta property="og:description" content="One marketplace, from the Magento module to Cloud Run, Compute Engine, TestFlight, and the stores.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wiembk.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%231c1915' width='32' height='32'/%3E%3Ctext x='4' y='22' fill='%23f3efe6' font-family='Georgia' font-size='16'%3EWB%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <span>WB · Sousse · 2023—2026</span>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#practice">Practice</a>
+        <a href="#skills">Skills</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Full-Stack Engineer · DevOps</p>
+      <h1>Wièm Boubakri</h1>
+      <p class="lede">I build Wamia, a multi-vendor marketplace in Tunisia, and I run the path it ships on. Magento and React for the product. Compute Engine, Cloud Run, and Expo for the release. The same person stays with it when production is under pressure.</p>
+      <ul class="contact">
+        <li><a href="mailto:boubakri.ict@gmail.com">boubakri.ict@gmail.com</a></li>
+        <li><a href="tel:+21652370702">+216 52 370 702</a></li>
+        <li><a href="https://github.com/wiembk">github.com/wiembk</a></li>
+        <li>Sousse, Tunisia</li>
+      </ul>
+    </section>
+
+    <ol class="path" aria-label="Where the marketplace runs">
+      <li>
+        <span class="idx">01 · Catalog</span>
+        <strong>Magento 2</strong>
+        <span class="where">Compute Engine · GitLab CI · Docker Compose</span>
+      </li>
+      <li>
+        <span class="idx">02 · Seller desk</span>
+        <strong>React</strong>
+        <span class="where">Docker image · Cloud Run · GraphQL</span>
+      </li>
+      <li>
+        <span class="idx">03 · Shoppers</span>
+        <strong>iOS &amp; Android</strong>
+        <span class="where">Expo · TestFlight · App Store · Play</span>
+      </li>
+      <li>
+        <span class="idx">04 · Edge &amp; cloud</span>
+        <strong>GCP, AWS, Cloudflare</strong>
+        <span class="where">Terraform now · CloudFormation first</span>
+      </li>
+    </ol>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <p class="section-lead">Employment is two chapters on one product. OBG from 2023, then Wamia from October 2024. The degree project underneath is the AWS Magento platform I designed before either job.</p>
+
+      <article class="case">
+        <header>
+          <p>Wamia · Oct 2024 — present</p>
+          <h3>Store modules</h3>
+        </header>
+        <div>
+          <p>I lead the modules that replace the legacy marketplace. The Store domain covers seller stores, catalog, orders, commissions, finance (balance, escrow, deposits, withdrawals), promotions, discounts, reviews, and refunds, with an admin and a GraphQL API.</p>
+          <p>Around that core: ClickToPay checkout, Meta catalog sync, WhatsApp order notifications, store analytics, and the move onto Magento 2.4.8 and PHP 8.3. In September 2026 I started the TypeScript rewrite — NestJS, Next.js, organizations and roles, MFA — on Terraform and Cloud Run.</p>
+          <ul class="stack">
+            <li>Magento 2</li>
+            <li>PHP</li>
+            <li>GraphQL</li>
+            <li>ClickToPay</li>
+            <li>NestJS</li>
+            <li>Terraform</li>
+            <li>Cloud Run</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <header>
+          <p>Wamia · 2025 — present</p>
+          <h3>Seller dashboard</h3>
+        </header>
+        <div>
+          <p>A React and TypeScript back office for sellers: products, inventory, orders, invoices, finance, promotions, shipping, reviews, and analytics, in French, English, and Arabic. It talks to Magento over GraphQL.</p>
+          <p>GitLab CI builds a Docker image, pushes it to Artifact Registry, and deploys Cloud Run for dev and production. Magento itself stays on a Compute Engine VM. That split is the architecture: a fast frontend, a commerce API that does not move with every UI release.</p>
+          <ul class="stack">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>GraphQL</li>
+            <li>Docker</li>
+            <li>Cloud Run</li>
+            <li>GitLab CI</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <header>
+          <p>Wamia · 2025 — 2026</p>
+          <h3>Shopper app</h3>
+        </header>
+        <div>
+          <p>React Native shopper flows on top of the same GraphQL API: search and filters, cart and stock, coupons, ClickToPay, wishlist, orders, and returns.</p>
+          <p>Releases go through Expo and EAS Build. Android ships to Google Play as an App Bundle. iOS goes to TestFlight so the team can install the build, then to the App Store.</p>
+          <ul class="stack">
+            <li>React Native</li>
+            <li>Expo</li>
+            <li>EAS Build</li>
+            <li>TestFlight</li>
+            <li>Apollo</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <header>
+          <p>Wamia · production</p>
+          <h3>The machine under the shop</h3>
+        </header>
+        <div>
+          <p>Magento runs as Docker Compose on Google Compute Engine: Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB. GitLab CI releases to staging and production over SSH. Cloudflare Turnstile sits in front of abusive catalog traffic.</p>
+          <p>The habit underneath started earlier. At ENET’Com I described the same kind of system in AWS CloudFormation, then installed Magento with Bash. At OBG I operated Docker, Nginx, GitLab, Elasticsearch, and both GCP and AWS while the Magento and Odoo integration was being built.</p>
+          <ul class="stack">
+            <li>Compute Engine</li>
+            <li>Nginx</li>
+            <li>Varnish</li>
+            <li>Docker</li>
+            <li>Cloudflare</li>
+            <li>MariaDB</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <header>
+          <p>OBG · Jan 2023 — Oct 2024</p>
+          <h3>Platform, ERP, operations</h3>
+        </header>
+        <div>
+          <p>Software engineer and DevOps on the Wamia platform. I refactored Magento across the store, improved database performance, and built APIs that sync inventory, orders, and sales with Odoo. I wrote the commission calculation used on seller products and tightened category performance.</p>
+          <p>On the operations side I deployed Odoo with Docker Compose and Nginx, TLS with Certbot, and DNS. A Flask API managed Dockerized Odoo instances, with backups across regions. GitLab workflows and staging environments sat in front of GCP and AWS.</p>
+          <ul class="stack">
+            <li>Magento</li>
+            <li>Odoo</li>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>Docker</li>
+            <li>AWS</li>
+            <li>GCP</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <header>
+          <p>ENET’Com · 2023</p>
+          <h3>End of studies</h3>
+        </header>
+        <div>
+          <p>Infrastructure as code for Magento on AWS, in Frankfurt, across two availability zones. Separate CloudFormation stacks for the VPC, security groups, Application Load Balancer, Auto Scaling, Aurora MySQL, Elasticsearch, ElastiCache Redis, and S3. Private subnets for data, public subnets for ingress, NAT for outbound.</p>
+          <p>A Bash script on EC2 reads the stack exports and installs Magento 2.4.3 against that Aurora cluster, Elasticsearch, and Redis, behind the load balancer. I also wrote up cost and performance against a projected traffic model. The templates and the installer are public:</p>
+          <p><a href="https://github.com/wiembk/magento-IAC">github.com/wiembk/magento-IAC</a><br><a href="https://github.com/wiembk/magento-ec2">github.com/wiembk/magento-ec2</a></p>
+          <ul class="stack">
+            <li>CloudFormation</li>
+            <li>VPC</li>
+            <li>EC2</li>
+            <li>Aurora</li>
+            <li>ElastiCache</li>
+            <li>ALB</li>
+            <li>Bash</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="practice">
+      <h2>How the work actually goes</h2>
+      <p class="section-lead">Web, mobile, and infrastructure are one job when the shop is live. The useful version of “works under pressure” is a short list of production days, not a personality line.</p>
+      <div class="notes">
+        <article>
+          <h3>Production days</h3>
+          <p>Site-wide 503s from a flapping Varnish probe. PHP-FPM killed by the out-of-memory killer. A disk filling with container logs. A MariaDB upgrade on the production database VM. Each one was narrowed, changed, and left in a state the next deploy could survive.</p>
+        </article>
+        <article>
+          <h3>One owner, three surfaces</h3>
+          <p>A seller feature usually means a Magento module, a React screen, and a release. The mobile app consumes the same API. I stay through TestFlight with the team instead of handing the binary off at the edge of the ticket.</p>
+        </article>
+        <article>
+          <h3>From scripts to Terraform</h3>
+          <p>The degree was CloudFormation and Bash. OBG was Docker, GitLab, and two clouds. Wamia production is Compose on Compute Engine, the seller desk is Cloud Run, Cloudflare is on the edge, and the new platform is Terraform. The tool changed. The habit is the same: the environment is part of the feature.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <table class="skills">
+        <tbody>
+          <tr>
+            <th>Languages</th>
+            <td>PHP, JavaScript, TypeScript, Python, Bash</td>
+          </tr>
+          <tr>
+            <th>Product</th>
+            <td>React, Next.js, React Native, Expo, Magento 2, GraphQL, REST, NestJS, Odoo</td>
+          </tr>
+          <tr>
+            <th>Release</th>
+            <td>Docker, GitLab CI, GitHub Actions, Nginx, Varnish, Cloudflare, TestFlight, App Store, Google Play</td>
+          </tr>
+          <tr>
+            <th>Cloud</th>
+            <td>GCP (Compute Engine, Cloud Run, Cloud SQL, GCS, Terraform), AWS (VPC, EC2, RDS Aurora, S3, ALB, ElastiCache, CloudFormation)</td>
+          </tr>
+          <tr>
+            <th>Data</th>
+            <td>MySQL, MariaDB, PostgreSQL, Redis, Elasticsearch</td>
+          </tr>
+          <tr>
+            <th>Languages spoken</th>
+            <td>English C1 · French B1</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="education">
+      <h2>Education &amp; certificates</h2>
+      <div class="two">
+        <div>
+          <h3 class="plain">ENET’Com Sfax</h3>
+          <p>Engineering degree, Network &amp; Cloud Infrastructure. 2020–2023.</p>
+          <h3 class="plain">ESSTHS Sousse</h3>
+          <p>Preparatory class, Mathematics and Physics. 2018–2020.</p>
+        </div>
+        <div>
+          <ul class="certs">
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>DevOps on AWS Specialization</li>
+            <li>Cloud Operations on AWS</li>
+            <li>Azure Fundamentals</li>
+            <li>Introduction to Programming Using Python</li>
+            <li>Introduction to Git and GitHub</li>
+            <li>Introduction to Network Automation</li>
+            <li>Crash Course on Python</li>
+            <li>IBM Full Stack Software Developer — in progress</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Wièm Boubakri</span>
+      <a href="resume.html">Printable resume</a>
+    </footer>
+  </div>
+</body>
+</html>
