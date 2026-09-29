@@ -69,58 +69,22 @@
 
     <section id="work">
       <h2>Selected work</h2>
-      <p class="section-lead">Wamia, in order. Seller dashboard first, then the store rewrite that replaced the legacy marketplace.</p>
-
-      <article class="case tone-teal">
-        <header>
-          <p>Wamia · Oct 2024 — May 2025</p>
-          <h3>Seller dashboard</h3>
-        </header>
-        <div>
-          <p>A React and TypeScript back office for sellers: products, inventory, orders, invoices, finance, promotions, shipping, reviews, and analytics, in French, English, and Arabic. It talks to Magento over GraphQL.</p>
-          <p>GitLab CI builds a Docker image, pushes it to Artifact Registry, and deploys Cloud Run for dev and production. Magento GraphQL stays on a Compute Engine VM.</p>
-          <ul class="stack">
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>GraphQL</li>
-            <li>Docker</li>
-            <li>Cloud Run</li>
-            <li>GitLab CI</li>
-          </ul>
-        </div>
-      </article>
+      <p class="section-lead">Newest first. Production and the store rewrite, then the earlier seller work, then OBG, then the degree project.</p>
 
       <article class="case tone-gold">
         <header>
-          <p>Wamia · May 2025 — Aug 2025</p>
-          <h3>Seller pause and catalog sync</h3>
+          <p>Wamia · 2026</p>
+          <h3>Production</h3>
         </header>
         <div>
-          <p>Seller Pause in Magento and React, and Meta Catalog Sync from Magento out to Meta. The catalog sync keeps external marketing channels on the same products as the shop.</p>
-          <p>This phase also covered the technical design for leaving the legacy marketplace: documentation, the target architecture, and the migration path.</p>
+          <p>Magento runs as Docker Compose on Google Compute Engine: Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB. GitLab CI releases to staging and production over SSH. Cloudflare Turnstile sits in front of abusive catalog traffic.</p>
           <ul class="stack">
-            <li>Magento 2</li>
-            <li>React</li>
-            <li>Meta</li>
-            <li>GraphQL</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="case tone-indigo">
-        <header>
-          <p>Wamia · 2025 — 2026</p>
-          <h3>Shopper app</h3>
-        </header>
-        <div>
-          <p>React Native shopper flows on the same GraphQL API: search and filters, cart and stock, coupons, ClickToPay, wishlist, orders, and returns.</p>
-          <p>Releases go through Expo and EAS Build. Android ships to Google Play as an App Bundle. iOS goes to TestFlight so the team can install the build, then to the App Store.</p>
-          <ul class="stack">
-            <li>React Native</li>
-            <li>Expo</li>
-            <li>EAS Build</li>
-            <li>TestFlight</li>
-            <li>Apollo</li>
+            <li>Compute Engine</li>
+            <li>Nginx</li>
+            <li>Varnish</li>
+            <li>Docker</li>
+            <li>Cloudflare</li>
+            <li>MariaDB</li>
           </ul>
         </div>
       </article>
@@ -144,20 +108,56 @@
         </div>
       </article>
 
-      <article class="case tone-gold">
+      <article class="case tone-indigo">
         <header>
-          <p>Wamia · 2026</p>
-          <h3>Production</h3>
+          <p>Wamia · 2025 — 2026</p>
+          <h3>Shopper app</h3>
         </header>
         <div>
-          <p>Magento runs as Docker Compose on Google Compute Engine: Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB. GitLab CI releases to staging and production over SSH. Cloudflare Turnstile sits in front of abusive catalog traffic.</p>
+          <p>React Native shopper flows on the same GraphQL API: search and filters, cart and stock, coupons, ClickToPay, wishlist, orders, and returns.</p>
+          <p>Releases go through Expo and EAS Build. Android ships to Google Play as an App Bundle. iOS goes to TestFlight so the team can install the build, then to the App Store.</p>
           <ul class="stack">
-            <li>Compute Engine</li>
-            <li>Nginx</li>
-            <li>Varnish</li>
+            <li>React Native</li>
+            <li>Expo</li>
+            <li>EAS Build</li>
+            <li>TestFlight</li>
+            <li>Apollo</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case tone-gold">
+        <header>
+          <p>Wamia · May 2025 — Aug 2025</p>
+          <h3>Seller pause and catalog sync</h3>
+        </header>
+        <div>
+          <p>Seller Pause in Magento and React, and Meta Catalog Sync from Magento out to Meta. The catalog sync keeps external marketing channels on the same products as the shop.</p>
+          <p>This phase also covered the technical design for leaving the legacy marketplace: documentation, the target architecture, and the migration path.</p>
+          <ul class="stack">
+            <li>Magento 2</li>
+            <li>React</li>
+            <li>Meta</li>
+            <li>GraphQL</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case tone-teal">
+        <header>
+          <p>Wamia · Oct 2024 — May 2025</p>
+          <h3>Seller dashboard</h3>
+        </header>
+        <div>
+          <p>A React and TypeScript back office for sellers: products, inventory, orders, invoices, finance, promotions, shipping, reviews, and analytics, in French, English, and Arabic. It talks to Magento over GraphQL.</p>
+          <p>GitLab CI builds a Docker image, pushes it to Artifact Registry, and deploys Cloud Run for dev and production. Magento GraphQL stays on a Compute Engine VM.</p>
+          <ul class="stack">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>GraphQL</li>
             <li>Docker</li>
-            <li>Cloudflare</li>
-            <li>MariaDB</li>
+            <li>Cloud Run</li>
+            <li>GitLab CI</li>
           </ul>
         </div>
       </article>
@@ -165,18 +165,18 @@
       <article class="case tone-plum">
         <header>
           <p>OBG · Jan 2023 — Oct 2024</p>
-          <h3>ERP and operations</h3>
+          <h3>Magento seller tools</h3>
         </header>
         <div>
-          <p>Software engineer and DevOps on the Wamia platform. I built the APIs that sync inventory, orders, and sales with Odoo, and the commission calculation used on seller products.</p>
-          <p>I deployed Odoo with Docker Compose and Nginx, TLS with Certbot, and DNS. A Flask API managed Dockerized Odoo instances, with backups across regions. GitLab workflows and staging environments sat in front of GCP and AWS, with Elasticsearch and MariaDB.</p>
+          <p>Sixty-one commits on the Magento marketplace, newest first. In September 2024 I worked on seller inventory: stock status, product filters, filtered-invoice PDFs, and the tag manager. In August, the inventory list, seller order status, cancel-processing, order PDFs with the seller logo, and the email sent when an order is processing.</p>
+          <p>In May, commission rules (percent tiers, two decimals, special price), variant dimensions and parent commission, and barcodes in the admin and on the storefront. In February, seller product creation (stock from quantity, default visibility, required weight) and the automatic import of enabled products into Odoo, with fulfillment type and dimensions.</p>
           <ul class="stack">
-            <li>Odoo</li>
-            <li>Python</li>
-            <li>Flask</li>
-            <li>Docker</li>
-            <li>AWS</li>
-            <li>GCP</li>
+            <li>Magento 2</li>
+            <li>PHP</li>
+            <li>Commission</li>
+            <li>Odoo import</li>
+            <li>Inventory</li>
+            <li>Orders</li>
           </ul>
         </div>
       </article>
@@ -217,7 +217,7 @@
         </article>
         <article class="tone-gold">
           <h3>From scripts to Terraform</h3>
-          <p>The degree was CloudFormation and Bash. OBG was Docker, GitLab, and two clouds. Wamia production is Compose on Compute Engine, the seller desk is Cloud Run, Cloudflare is on the edge, and the new platform is Terraform. The tool changed. The habit is the same: the environment is part of the feature.</p>
+          <p>The degree was CloudFormation and Bash. At OBG the commits are Magento seller tools on the marketplace. Wamia production is Compose on Compute Engine, the seller desk is Cloud Run, Cloudflare is on the edge, and the new platform is Terraform. The tool changed. The habit is the same: the environment is part of the feature.</p>
         </article>
       </div>
     </section>
