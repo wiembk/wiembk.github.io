@@ -71,6 +71,12 @@ ul {
 
 li { margin: 0 0 4px; }
 
+a { color: #111; }
+
+li a {
+  word-break: break-all;
+}
+
 @page {
   size: A4;
   margin: 14mm 14mm 14mm 14mm;
