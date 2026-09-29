@@ -49,13 +49,19 @@
       <p class="here-pin"><span class="pulse"></span> You are here</p>
       <p class="eyebrow">Full-Stack Engineer · DevOps</p>
       <h1>Wièm Boubakri</h1>
-      <p class="lede">I built the new Wamia store system: multi-user stores with RBAC, KYC, and JWT, shaped so it can be upgraded later. I created the seller dashboard and the store dashboard. The product ships on Magento and React, through Compute Engine, Cloud Run, and Expo.</p>
+      <p class="lede">I own a production marketplace end to end. I built the new Wamia store system: multi-user stores with RBAC, KYC, and JWT, shaped so it can be upgraded later. I created the seller dashboard and the store dashboard. The product ships on Magento and React, through Compute Engine, Cloud Run, and Expo, and I am the one on call when it breaks.</p>
       <ul class="contact">
         <li><a href="mailto:boubakri.ict@gmail.com">boubakri.ict@gmail.com</a></li>
         <li><a href="tel:+21652370702">+216 52 370 702</a></li>
         <li><a href="https://github.com/wiembk">github.com/wiembk</a></li>
         <li>Sousse, Tunisia</li>
       </ul>
+      <dl class="facts" aria-label="At a glance">
+        <div><dt>Commits</dt><dd>1,929</dd></div>
+        <div><dt>Repositories</dt><dd>5</dd></div>
+        <div><dt>Surfaces</dt><dd>Web · Mobile · Infra</dd></div>
+        <div><dt>In production since</dt><dd>2023</dd></div>
+      </dl>
       <svg class="compass" viewBox="0 0 80 80" aria-hidden="true">
         <circle cx="40" cy="40" r="30" fill="none" stroke="currentColor" stroke-width="0.8"/>
         <circle cx="40" cy="40" r="18" fill="none" stroke="currentColor" stroke-width="0.5"/>
@@ -90,23 +96,46 @@
 
     <section id="work">
       <h2>Selected work</h2>
-      <p class="section-lead">Newest first. Production and the new store system, then the seller dashboard, then OBG, then the degree project.</p>
+      <p class="section-lead">Newest first. The new platform, production and the store system, then the seller dashboard, then OBG, then the degree project.</p>
 
       <div class="miles">
+      <article class="case">
+        <header>
+          <p>Wamia · Sep 2026 — present</p>
+          <h3>Platform foundation</h3>
+        </header>
+        <div>
+          <p>The TypeScript platform that replaces the legacy stack. NestJS API, Next.js storefront, and admin on Cloud Run, all provisioned with Terraform: GCS state, staging and production roots, Cloud SQL, budgets, audit logs, EU backups. Staging refreshes from an anonymized production backup.</p>
+          <p>Security was in the first deploy, not a later ticket: email OTP, TOTP, and passkey MFA with step-up auth, organizations with scoped RBAC, JWT rotation, login throttling, non-root images, and a PR-provenance deploy gate.</p>
+          <ul class="stack">
+            <li>NestJS</li>
+            <li>Next.js</li>
+            <li>Terraform</li>
+            <li>Cloud Run</li>
+            <li>Cloud SQL</li>
+            <li>MFA</li>
+            <li>RBAC</li>
+          </ul>
+        </div>
+      </article>
+
       <article class="case">
         <header>
           <p>Wamia · 2026</p>
           <h3>Production</h3>
         </header>
         <div>
-          <p>Magento runs as Docker Compose on Google Compute Engine: Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB. GitLab CI releases to staging and production over SSH. Cloudflare Turnstile sits in front of abusive catalog traffic.</p>
+          <p>Magento runs as Docker Compose on Google Compute Engine: Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB. GitLab CI releases to staging and production over SSH, and now gates merges with PHPUnit integration and GraphQL API suites, security tests, and PHPStan.</p>
+          <p>Incidents closed with a written root cause: site-wide 503 storms from a flapping Varnish probe, a PHP-FPM OOM crash loop, disk fill from unrotated container logs, and MariaDB crashes (forensics documented, 10.4.30 to 10.4.34). Replaced a hard 429 bot block with a Cloudflare Turnstile human check, added a staging observability stack, and brought a parallel Magento 2.4.8 / PHP 8.3 / OpenSearch stack to migrate onto.</p>
           <ul class="stack">
             <li>Compute Engine</li>
             <li>Nginx</li>
             <li>Varnish</li>
-            <li>Docker</li>
-            <li>Cloudflare</li>
+            <li>PHP-FPM</li>
             <li>MariaDB</li>
+            <li>Cloudflare</li>
+            <li>PHPUnit</li>
+            <li>PHPStan</li>
           </ul>
         </div>
       </article>
@@ -117,15 +146,16 @@
           <h3>Store modules</h3>
         </header>
         <div>
-          <p>I built the new Wamia store system. Each store has multiple users, with RBAC, KYC, and JWT authentication, and the model is split so a later upgrade does not mean a rewrite. I created the store dashboard for that system. The modules cover seller stores, catalog, orders, commissions, finance, promotions, discounts, reviews, and refunds, with an admin and GraphQL.</p>
-          <p>With that: ClickToPay, WhatsApp order notifications, store analytics, and the move onto Magento 2.4.8 and PHP 8.3. In September 2026 I started the TypeScript rewrite — NestJS, Next.js, organizations and roles, MFA — on Terraform and Cloud Run.</p>
+          <p>I built the new Wamia store system. Each store has multiple users, with RBAC, KYC document flows, and JWT authentication, and the model is split so a later upgrade does not mean a rewrite. I created the store dashboard for that system. The modules cover seller stores, catalog, orders, commissions, finance (balance, deposits, escrow, penalties, withdrawals, a delay-penalty cron), promotions, discounts, reviews, refunds, and CSV import/export, with an admin and GraphQL.</p>
+          <p>With that: ClickToPay redesigned as order-first checkout with an atomic claim on pending payments and status reconciliation, WhatsApp order notifications, store analytics, a nightly Elasticsearch attribute reindex, and a composite-score product ranking.</p>
           <ul class="stack">
             <li>Magento 2</li>
             <li>PHP</li>
             <li>GraphQL</li>
             <li>ClickToPay</li>
-            <li>NestJS</li>
-            <li>Terraform</li>
+            <li>Elasticsearch</li>
+            <li>RBAC</li>
+            <li>KYC</li>
           </ul>
         </div>
       </article>
@@ -136,7 +166,7 @@
           <h3>Shopper app</h3>
         </header>
         <div>
-          <p>React Native shopper flows on the same GraphQL API: search and filters, cart and stock, coupons, ClickToPay, wishlist, orders, and returns.</p>
+          <p>React Native shopper flows on the same GraphQL API: search and filters, cart and stock, coupons, ClickToPay with payment verification, OTP channels, wishlist, orders, and return requests.</p>
           <p>Releases go through Expo and EAS Build. Android ships to Google Play as an App Bundle. iOS goes to TestFlight so the team can install the build, then to the App Store.</p>
           <ul class="stack">
             <li>React Native</li>
@@ -171,7 +201,7 @@
           <h3>Seller dashboard</h3>
         </header>
         <div>
-          <p>I created this seller dashboard: a React and TypeScript back office for products, inventory, orders, invoices, finance, promotions, shipping, reviews, and analytics, in French, English, and Arabic. It talks to Magento over GraphQL. The store dashboard came later, with the new store system.</p>
+          <p>I created this seller dashboard: a React and TypeScript back office for products, inventory, orders, invoices with VAT, finance, promotions, shipping, store reviews, CSV import/export, and analytics with a KPI guide, in French, English, and Arabic. It talks to Magento over GraphQL. The store dashboard came later, with the new store system.</p>
           <p>GitLab CI builds a Docker image, pushes it to Artifact Registry, and deploys Cloud Run for dev and production. Magento GraphQL stays on a Compute Engine VM.</p>
           <ul class="stack">
             <li>React</li>
@@ -256,6 +286,14 @@
           <tr>
             <th>Product</th>
             <td>React, Next.js, React Native, Expo, Magento 2, GraphQL, REST, NestJS, Odoo</td>
+          </tr>
+          <tr>
+            <th>Quality</th>
+            <td>PHPUnit, PHPStan, GraphQL API tests, security tests, e2e screenshots, CI quality gates</td>
+          </tr>
+          <tr>
+            <th>Security</th>
+            <td>JWT, RBAC, MFA (email OTP, TOTP, passkeys), KYC flows, Cloudflare Turnstile, CSP, IAM</td>
           </tr>
           <tr>
             <th>Release</th>

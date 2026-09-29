@@ -183,6 +183,35 @@ h1 {
   font-size: 13px;
 }
 
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  gap: 10px 34px;
+  margin: 26px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.facts div { margin: 0; }
+
+.facts dt {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+
+.facts dd {
+  margin: 2px 0 0;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
 .compass {
   position: absolute;
   top: 48px;
@@ -436,6 +465,7 @@ footer a { color: var(--ink); }
   .atlas-bar { padding: 12px 16px; }
   .sheet { width: min(var(--max), calc(100% - 28px)); padding-left: 28px; }
   .path, .notes, .two, .case { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: 1fr 1fr; }
   .miles::before { left: 0; transform: none; }
   .case:nth-child(odd),
   .case:nth-child(even) { width: auto; margin: 0; }
