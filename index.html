@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wièm Boubakri — Full-Stack &amp; DevOps</title>
-  <meta name="description" content="Wièm Boubakri, full-stack and DevOps engineer in Sousse. Magento, React, React Native, and the GCP and AWS infrastructure they run on. Wamia marketplace, 2023–present.">
+  <meta name="description" content="Wièm Boubakri, full-stack and DevOps engineer in Sousse. Magento, React, React Native, and the GCP and AWS infrastructure they run on. The Wamia store system, 2023–present.">
   <meta property="og:title" content="Wièm Boubakri — Full-Stack & DevOps">
-  <meta property="og:description" content="One marketplace, from the Magento module to Cloud Run, Compute Engine, TestFlight, and the stores.">
+  <meta property="og:description" content="The new Wamia store system, from Magento modules to Cloud Run, Compute Engine, TestFlight, and the stores.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wiembk.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@
       <section class="hero">
         <p class="eyebrow">Full-Stack Engineer · DevOps</p>
         <h1>Wièm Boubakri</h1>
-        <p class="lede">I build Wamia, a multi-vendor marketplace in Tunisia, and I run the path it ships on. Magento and React for the product. Compute Engine, Cloud Run, and Expo for the release. The same person stays with it when production is under pressure.</p>
+        <p class="lede">I built the new Wamia store system: multi-user stores with RBAC, KYC, and JWT, shaped so it can be upgraded later. I created the seller dashboard and the store dashboard. I also run the path the product ships on. Magento and React for the product. Compute Engine, Cloud Run, and Expo for the release. The same person stays with it when production is under pressure.</p>
         <ul class="contact">
           <li><a href="mailto:boubakri.ict@gmail.com">boubakri.ict@gmail.com</a></li>
           <li><a href="tel:+21652370702">+216 52 370 702</a></li>
@@ -69,7 +69,7 @@
 
     <section id="work">
       <h2>Selected work</h2>
-      <p class="section-lead">Newest first. Production and the store rewrite, then the earlier seller work, then OBG, then the degree project.</p>
+      <p class="section-lead">Newest first. Production and the new store system, then the seller dashboard, then OBG, then the degree project.</p>
 
       <article class="case tone-gold">
         <header>
@@ -95,7 +95,7 @@
           <h3>Store modules</h3>
         </header>
         <div>
-          <p>This is the phase where I refactored the Wamia Magento platform across the storefront, the backend, and the infrastructure, and improved database performance and category pages. The new Store modules replace the legacy marketplace: seller stores, catalog, orders, commissions, finance, promotions, discounts, reviews, and refunds, with an admin and GraphQL.</p>
+          <p>I built the new Wamia store system. Each store has multiple users, with RBAC, KYC, and JWT authentication, and the model is split so a later upgrade does not mean a rewrite. I created the store dashboard for that system. The modules cover seller stores, catalog, orders, commissions, finance, promotions, discounts, reviews, and refunds, with an admin and GraphQL.</p>
           <p>With that: ClickToPay, WhatsApp order notifications, store analytics, and the move onto Magento 2.4.8 and PHP 8.3. In September 2026 I started the TypeScript rewrite — NestJS, Next.js, organizations and roles, MFA — on Terraform and Cloud Run.</p>
           <ul class="stack">
             <li>Magento 2</li>
@@ -149,7 +149,7 @@
           <h3>Seller dashboard</h3>
         </header>
         <div>
-          <p>A React and TypeScript back office for sellers: products, inventory, orders, invoices, finance, promotions, shipping, reviews, and analytics, in French, English, and Arabic. It talks to Magento over GraphQL.</p>
+          <p>I created this seller dashboard: a React and TypeScript back office for products, inventory, orders, invoices, finance, promotions, shipping, reviews, and analytics, in French, English, and Arabic. It talks to Magento over GraphQL. The store dashboard came later, with the new store system.</p>
           <p>GitLab CI builds a Docker image, pushes it to Artifact Registry, and deploys Cloud Run for dev and production. Magento GraphQL stays on a Compute Engine VM.</p>
           <ul class="stack">
             <li>React</li>
