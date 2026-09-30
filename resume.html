@@ -23,13 +23,13 @@
     <h3>Full-Stack and DevOps Engineer, Wamia</h3>
     <p class="meta">Sousse, Tunisia · October 2024 - Present</p>
     <ul>
-      <li>September 2026 - Present. Founded the TypeScript platform that replaces the legacy stack: NestJS API, Next.js storefront, and admin on Cloud Run, all provisioned with Terraform (GCS state, staging and production roots, Cloud SQL, budgets, audit logs, EU backups). Security from the first deploy: email OTP, TOTP, and passkey MFA with step-up auth, scoped RBAC, JWT rotation, login throttling, non-root images, and a PR-provenance deploy gate. Staging refreshes from an anonymized production backup.</li>
-      <li>2026. Ran production Magento on Compute Engine (Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB). Root-caused and fixed site-wide 503 storms from a flapping Varnish probe, a PHP-FPM OOM crash loop, disk fill from unrotated container logs, and MariaDB crashes (documented forensics, upgraded 10.4.30 to 10.4.34). Replaced a hard 429 bot block with a Cloudflare Turnstile human check, tuned FPM pool sizing, and stood up a Prometheus, Alertmanager, and Grafana monitoring and observability stack with Blackbox and mysqld exporters and written alert rules. Brought a parallel Magento 2.4.8 / PHP 8.3 / OpenSearch staging stack and migrated the codebase to it.</li>
-      <li>2026. Added CI quality gates to the Magento repository in GitLab: PHPUnit integration and GraphQL API suites, security tests, and PHPStan with a managed baseline. Redesigned ClickToPay checkout as order-first with an atomic claim on pending payments, cart-drift protection, and status reconciliation, so no paid session is lost or double-placed.</li>
-      <li>September 2025 - Present. Designed and built the Wamia store system: multi-user stores with RBAC, KYC document flows, and JWT auth, structured so a later upgrade is not a rewrite. Created the store dashboard. Modules cover catalog, orders, commissions, finance (balance, deposits, escrow, penalties, withdrawals, delay-penalty cron), promotions, discounts, reviews, refunds, CSV import/export, and analytics, exposed through an admin UI and GraphQL. Added a nightly Elasticsearch attribute reindex and a composite-score product ranking.</li>
-      <li>2025 - 2026. Shipped the React Native shopper app with Expo and EAS Build: search, cart and stock, coupons, ClickToPay, wishlist, OTP channels, orders, and returns. iOS to TestFlight then the App Store; Android to Google Play as an App Bundle.</li>
-      <li>May 2025 - August 2025. Shipped Seller Pause in Magento and React, and Meta Catalog Sync from Magento to Meta. Wrote the migration plan off the legacy marketplace.</li>
-      <li>October 2024 - May 2025. Created the React and TypeScript seller dashboard in French, English, and Arabic: products, inventory, orders, invoices with VAT, finance, store reviews, and analytics with a KPI guide. GitLab CI builds a Docker image and deploys it to Cloud Run against Magento GraphQL on Compute Engine.</li>
+      <li>September 2026 - Present. Founded the next platform in NestJS and Next.js on Cloud Run, provisioned with Terraform (staging and production, Cloud SQL, backups). Security built in from day one: MFA (OTP, TOTP, passkeys), scoped RBAC, JWT rotation, and a gated deploy pipeline.</li>
+      <li>2026. Run production Magento on Compute Engine (Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB). Root-caused and fixed recurring outages, tuned capacity, and set up Prometheus, Alertmanager, and Grafana monitoring. Led the Magento 2.4.8 / PHP 8.3 / OpenSearch upgrade.</li>
+      <li>2026. Added CI quality gates in GitLab (PHPUnit, GraphQL API tests, security tests, PHPStan). Redesigned ClickToPay checkout so no paid session is lost or double-placed.</li>
+      <li>September 2025 - Present. Designed and built the Wamia store system: multi-user stores with RBAC, KYC, and JWT auth, structured to be upgraded without a rewrite. Created the store dashboard covering catalog, orders, commissions, finance, promotions, refunds, and analytics over GraphQL.</li>
+      <li>2025 - 2026. Shipped the React Native shopper app (Expo, EAS Build) with search, cart, coupons, ClickToPay, orders, and returns. Released on the App Store and Google Play.</li>
+      <li>May 2025 - August 2025. Shipped Seller Pause and Meta Catalog Sync in Magento and React. Wrote the migration plan off the legacy marketplace.</li>
+      <li>October 2024 - May 2025. Created the React and TypeScript seller dashboard (FR/EN/AR): products, inventory, orders, invoices, finance, and analytics. Deployed through GitLab CI to Cloud Run against Magento GraphQL.</li>
     </ul>
 
     <h3>Software Engineer and DevOps Engineer, OBG</h3>
@@ -44,7 +44,7 @@
     <h2>Key Achievements</h2>
     <ul>
       <li>Works across three surfaces on one product: Magento backend and GraphQL, React dashboards, React Native app, and the release path for each.</li>
-      <li>Production incidents closed with a documented root cause: Varnish probe 503s, PHP-FPM OOM, log disk fill, MariaDB crashes.</li>
+      <li>Production incidents closed with a documented root cause, from web tier to database.</li>
     </ul>
 
     <h2>Projects</h2>
