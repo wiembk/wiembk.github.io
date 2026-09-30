@@ -23,22 +23,21 @@
     <h3>Full-Stack and DevOps Engineer, Wamia</h3>
     <p class="meta">Sousse, Tunisia · October 2024 - Present</p>
     <ul>
-      <li>September 2026 - Present. Founded the next platform in NestJS and Next.js on Cloud Run, provisioned with Terraform (staging and production, Cloud SQL, backups). Security built in from day one: MFA (OTP, TOTP, passkeys), scoped RBAC, JWT rotation, and a gated deploy pipeline.</li>
-      <li>2026. Run production Magento on Compute Engine (Nginx, Varnish, PHP-FPM, Redis, RabbitMQ, MariaDB). Root-caused and fixed recurring outages, tuned capacity, and set up Prometheus, Alertmanager, and Grafana monitoring. Led the Magento 2.4.8 / PHP 8.3 / OpenSearch upgrade.</li>
-      <li>2026. Added CI quality gates in GitLab (PHPUnit, GraphQL API tests, security tests, PHPStan). Redesigned ClickToPay checkout so no paid session is lost or double-placed.</li>
-      <li>September 2025 - Present. Designed and built the Wamia store system: multi-user stores with RBAC, KYC, and JWT auth, structured to be upgraded without a rewrite. Created the store dashboard covering catalog, orders, commissions, finance, promotions, refunds, and analytics over GraphQL.</li>
-      <li>2025 - 2026. Shipped the React Native shopper app (Expo, EAS Build) with search, cart, coupons, ClickToPay, orders, and returns. Released on the App Store and Google Play.</li>
-      <li>May 2025 - August 2025. Shipped Seller Pause and Meta Catalog Sync in Magento and React. Wrote the migration plan off the legacy marketplace.</li>
-      <li>October 2024 - May 2025. Created the React and TypeScript seller dashboard (FR/EN/AR): products, inventory, orders, invoices, finance, and analytics. Deployed through GitLab CI to Cloud Run against Magento GraphQL.</li>
+      <li>September 2026 - Present. Founded the next-generation platform in NestJS and Next.js on Cloud Run, fully provisioned with Terraform, with MFA, scoped RBAC, and a gated deploy pipeline from the first release.</li>
+      <li>2026. Own production operations for the Magento stack on Google Cloud: root-caused and fixed recurring outages, set up Prometheus and Grafana monitoring, and led the Magento 2.4.8 / PHP 8.3 upgrade.</li>
+      <li>2026. Introduced CI quality gates (PHPUnit, PHPStan, API and security tests) and redesigned the ClickToPay checkout to eliminate lost and duplicate orders.</li>
+      <li>September 2025 - Present. Designed and built the Wamia store system: multi-user stores with RBAC, KYC, and JWT, plus the store dashboard for catalog, orders, commissions, and finance.</li>
+      <li>2025 - 2026. Shipped the React Native shopper app to the App Store and Google Play, including checkout with ClickToPay, orders, and returns.</li>
+      <li>May 2025 - August 2025. Delivered Seller Pause and Meta Catalog Sync, and wrote the migration plan off the legacy marketplace.</li>
+      <li>October 2024 - May 2025. Created the trilingual (FR/EN/AR) React seller dashboard and its CI/CD pipeline to Cloud Run.</li>
     </ul>
 
     <h3>Software Engineer and DevOps Engineer, OBG</h3>
     <p class="meta">January 2023 - October 2024</p>
     <ul>
-      <li>September 2024. Seller inventory on Magento: stock-status editing, product filters, and a PDF of filtered invoices. Added the tag manager module.</li>
-      <li>August 2024. Inventory list with pagination and translations, seller order status updates, cancel-processing, and order PDFs with the seller logo. Email to the seller when an order moves to processing.</li>
-      <li>May 2024. Commission rules for seller products: percent tiers, two-decimal amounts, and special-price handling. Product dimensions and parent commission for variant products. Barcode assignment in the admin and on the storefront.</li>
-      <li>February 2024. Seller product creation: stock from the quantity the seller sets, default catalog visibility, and required weight. Automatic import of enabled Magento products into Odoo, including fulfillment type and dimensions.</li>
+      <li>Built the seller side of a Magento 2 marketplace: product creation, inventory, order management, invoice PDFs, and seller notifications.</li>
+      <li>Implemented the commission engine for seller products, including tiered rates and variant handling.</li>
+      <li>Automated product sync from Magento to Odoo ERP.</li>
     </ul>
 
     <h2>Key Achievements</h2>
@@ -52,9 +51,8 @@
     <h3>Infrastructure as Code and Magento Deployment</h3>
     <p class="meta">ENET'Com · 2023 · https://github.com/wiembk/magento-IAC · https://github.com/wiembk/magento-ec2</p>
     <ul>
-      <li>Designed a high-availability AWS architecture in CloudFormation in eu-central-1 across two availability zones: VPC, public and private subnets, NAT, security groups, Application Load Balancer, Auto Scaling, Aurora MySQL, Elasticsearch, ElastiCache Redis, and S3.</li>
-      <li>Automated Magento 2.4.3 installation with Bash on EC2. The script reads CloudFormation exports and connects the shop to Aurora, Elasticsearch, Redis, and the load balancer.</li>
-      <li>Wrote a cost and performance reading of the design against projected traffic.</li>
+      <li>Designed a high-availability AWS architecture in CloudFormation across two availability zones: VPC, ALB, Auto Scaling, Aurora MySQL, Elasticsearch, ElastiCache, and S3.</li>
+      <li>Automated the Magento installation on EC2 with Bash, wired to the provisioned services.</li>
     </ul>
 
     <h2>Education</h2>
